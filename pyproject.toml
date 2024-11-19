@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "gitsecure"
+version = "0.1.0"
+description = "This tool is designed to analyze GitHub repositories and check if critical security configurations, such as Security Policies, Dependabot Alerts, and Code Scanning, are enabled."
+authors = ["Alish Chhetri <chhetri01@allegheny.edu>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+requests = "^2.32.3"
+rich = "^13.9.4"
+typer = "^0.13.1"
+python-dotenv = "^1.0.1"
+
+[tool.poetry.scripts]
+gitsecure = "gitsecure.main:cli"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
